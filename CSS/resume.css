@@ -251,6 +251,25 @@ header{
 	background: rgba(0, 0, 0, 0.25);
 }
 
+/* PROFESSIONAL LINKS */
+.prof_links_title{
+	font-size: 2em;
+	margin: 25px 0;
+}
+
+.prof_link{
+	color: #fff;
+}
+
+.fa{
+	font-size: 5em !important;
+	margin: 0 30px;
+	transition: all 0.6s;
+}
+
+.fa:hover{
+	text-shadow: 0 0 30px #fff;
+}
 
 /* EDUCATION AND EXPERIENCE SECTION
 ===================================*/
