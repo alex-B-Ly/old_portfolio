@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=========
+	MAIN
+  =========*/
+
+html, body{
+	height:100%;
+	width: 100%;
+	position: absolute;
+}
+
+body{
+	background:url("../images/congruent_outline.png"); /* This pattern is downloaded from www.subtlepatterns.com */
+	color:white;
+}
+
+/*========
+   HEADER
+  ========*/
+
+header{
+	height: 160px;
+	background: rgba(100,100,100,0.35);
+	border-bottom: 1px solid #111;
+}
+
+.pic-wrap{
+	float: left;
+	height: 140px;
+	width: 130px;
+	border-radius: 50%;
+	border: 3px solid white;
+	overflow: hidden;
+	margin: 8px 0 0 70px;
+}
+
+.main_pic{
+	height: 100%;
+	width: 100%;
+}
+
+.main_title{
+	float: right;
+	margin: 40px 80px 0 0;
+	font-size: 4.25em;
+}
+
+/*========
+   SIDEBAR
+   =======*/
+
+aside{
+	float: left;
+	display: block;
+	width: 15%;
+	min-width: 250px;
+	height: 100%;
+	background: rgba(60,60,60,1);
+	text-align: center;
+}
+
+.nav-items li{
+	margin: 100px auto;
+	position: relative;
+}
+
+.nav-items a,
+.nav-items a:visited,
+.nav-items a:link{
+	color: #fff;
+	font-size: 3em;
+	text-decoration: none;
+	background: #444;
+	padding: 12px;
+	font-weight: bold;
+	box-shadow: 0 0 0 6px #666;
+	position: relative;
+	box-sizing:border-box;
+	border: 7px solid rgba(60,60,60,1);
+	-webkit-transition: all 1.25s;
+	-ms-transition: all 1.25s;
+	-o-transition: all 1.25s;	
+	transition: all 1.25s;
+}
+
+
+.nav-items a:active{
+	color: #fffff0;
+	background: #777;
+}
+
+.nav-items a:hover{
+	background: #555;
+}
+
+.nav-items a:hover:before{
+	content: " ";
+	display: block;
+	box-sizing:border-box;
+	position: absolute;
+	border: 5px solid rgba(60,60,60,1);
+	width: 85%;
+	left: 7.5%;
+	top:-20%;	
+}
+
+.nav-items a:hover:after{
+	content: " ";
+	display: block;
+	box-sizing:border-box;
+	position: absolute;
+	border: 5px solid rgba(60,60,60,1);
+	width: 85%;
+	left: 7.5%;
+	bottom:-20%;
+}
+
+/*=========
+	MAIN
+	=======*/
+
+.main{
+	border: 1px solid #666;
+	width: 55%;
+	margin: 80px 300px 0 50px;
+	float: right;
+}
+
+.main-text{
+	font-size: 1.6em;
+	line-height: 1.4em;
+	background: rgba(60,60,60,0.5);
+	padding: 30px;
+}
+
+.main-text::first-letter{
+	font-size: 1.8em;
+}
+/*===============
+	MEDIA QUERIES
+	=============*/
+
+@media screen and (max-width: 1400px){
+	.main{
+		width: 65%;
+		margin: 40px 70px 0 0;
+	}
+}
+
+
+@media screen and (max-width: 950px){
+
+	.main_title{
+		float: right;
+	}
+
+	.pic-wrap{
+		margin-right: 22px;
+	}
+
+	aside{
+		width: 100%;
+		height: auto;
+		margin: 10px auto;
+	}
+
+	.nav-items li{
+		display: inline-block;
+		margin: 40px 20px;
+	}
+
+	.nav-items a{
+		border-radius: 0;
+	}
+
+	.main{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.lorem-ipsum{
+		padding: 30px;
+	}
+
+@media screen and (max-width: 670px){
+
+	.nav-items li{
+		box-sizing: border-box;
+		width:100%;
+		display: block;
+		margin: 5px auto;
+		border-bottom: 1px solid #222;
+		padding:7px;
+		background: rgba(40,40,40,0.7);
+	}
+
+	.nav-items a,
+	.nav-items a:visited,
+	.nav-items a:link{
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		background: none;
+		display: block;
+	}
+
+	.nav-items a:hover:before,
+	.nav-items a:hover:after{
+		display: none;
+	}
+
+}
+
+/* BREAK POINTS */
+
+@media screen and (min-width: 671px) and (max-width: 765px){
+	.nav-items li{
+		margin: 40px 4px;
+	}
+}
+
+@media screen and (max-width: 560px){
+	header{
+		padding-top: 10px;
+		height: 250px;
+		text-align: center;
+	}
+
+	.pic-wrap,
+	.main_title{
+		float: none;
+		margin: 5px auto;
+	}
+
+}

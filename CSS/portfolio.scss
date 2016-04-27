@@ -1,0 +1,349 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET */
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background: url(../images/congruent_outline.png); /* This pattern is downloaded from www.subtlepatterns.com */
+}
+
+/* REUSABLES */
+
+@mixin vendor-prefix($name,$arg){
+	-webkit-#{$name}: #{$arg};
+	-moz-#{$name}: #{$arg};
+	-o-#{$name}: #{$arg};
+	-ms-#{$name}: #{$arg};
+	#{$name}: #{$arg};
+}
+
+.clearfix{
+	&:after{
+		content:"";
+		display: table;
+		clear: both;
+	}
+}
+
+$back-color: rgba(70,70,70,0.6);
+
+.description-visible{
+	display: inherit;
+}
+
+.description-hidden{
+	display: none;
+}
+
+.img-hide{
+	visibility: hidden;
+}
+
+.img-show{
+	visibility: visible;
+}
+
+/* HEADER SECTION */
+
+header{
+	color: red;
+	min-height: 70px;
+	max-height: 70px;
+	background: darken(rgba($back-color, 0.7),12%);
+}
+
+h1{
+	float: left;
+	margin: 17px 0 0 20px;
+}
+
+.main-page-link{
+	text-decoration: none;
+	color: #fff;
+	font-size: 2em;
+	&:hover{
+		text-shadow: 0 0 3px #fff;
+	}
+}
+
+nav{
+	position: relative;
+}
+
+.resp-menu-icon{
+	height: 50px;
+	width: 50px;
+	float: right;
+	margin: 10px 3px 0 0;
+	background: #fff;
+	cursor: pointer;
+}
+
+.nav-links{
+	position: absolute;
+	right: 0;
+	top: 61px;
+	background: darken(rgba($back-color, 0.95),25%);
+	display: none;
+}
+
+.nav-links li{
+	display: block;
+	font-size: 3em;
+	border-bottom: 1px solid #fff;
+	padding: 20px;
+}
+
+.nav-links li a{
+	text-decoration: none;
+	color: #fff;
+	&:hover{
+		text-shadow: 0 0 3px #fff;
+	}
+}
+
+/* PORTFOLIO SECTION */
+
+h2{
+	color: #fff;
+	font-size: 4.6em;
+	height: 80px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.portfolio-wrap{
+	background: darken($back-color, 20%);
+	margin-top: 50px;
+	margin-bottom: 20px;
+	padding-top: 30px;
+	text-align: center;	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.portfolio-site{
+	width: 85%;
+	max-width: 300px;
+	min-height: 360px;
+	flex-grow: 1;
+	padding: 15px 5px;
+	margin: 0 auto 40px auto;
+	background: lighten($back-color, 15%);
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 10px #888;
+}
+
+.site-img img{
+	width:90%;
+	height: 168px;
+}
+
+.site-title{
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 2.3em;
+	margin: 15px auto;
+	&:hover{
+		text-shadow: 0 0 #fff;
+	}
+}
+
+.site-info{
+	display:none;
+	margin-bottom: 50px;
+}
+
+.site-detail-toggle{
+	cursor: pointer;
+	padding: 15px;
+	position: absolute;
+	bottom: 7px;
+	left: 5%;
+	width: 80%;
+	background: lighten($back-color, 60%);
+	font-size: 1.5em;
+	box-shadow: inset 0 0px 15px darken($back-color,25%);
+	@include vendor-prefix("transition", "all 1s");
+	&:hover{
+		padding:14px;
+		font-weight: bold;
+		font-size: 1.6em;		
+	}
+}
+
+.site-dev,
+.site-description{
+	background: darken(rgba($back-color, 1), 20%);
+	font-size: 1.5em;
+	line-height: 1.3em;
+	padding: 10px;
+	color: #fff;
+	margin: 5px auto;
+	
+}
+
+.site-dev{
+	&:before{
+		content:"Site developed with: ";
+	}
+}
+
+.site-description{
+	font-size: 1.3em;
+	margin-bottom: 5px;
+	&:before{
+		content:"Site Description: ";
+	}
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 420px){
+	h2{
+		font-size: 6em;
+	}
+
+	.portfolio-site{
+		min-height: 390px;
+	}
+}
+
+@media screen and (min-width: 640px){
+	.resp-menu-icon{
+		display: none;
+	}
+
+	.nav-links{
+		position: absolute;
+		top: 20px;
+		right: 0;
+		display: inline !important;
+		background: inherit;
+	}
+
+	.nav-links li{
+		display: inline-block;
+		padding: 0;
+		font-size: 2em;
+		border: 0;
+		margin-right: 20px;		
+	}
+
+	.nav-links li a{
+		padding-top: 13px;
+		&:hover{
+			border-top: 4px solid #fff;
+		}
+	}
+
+	h2{
+		margin: 80px auto 125px auto;
+		font-size: 7.5em;
+	}
+
+	.portfolio-wrap{
+		padding-top: initial;
+	}
+
+	.portfolio-site{
+		float:left;
+		margin: 20px 5px;
+	}
+
+	.site-info{
+		position: absolute;
+		top: 8px;
+		left: 0px;		
+	}
+
+	.site-dev,
+	.site-description{
+		@include vendor-prefix("box-sizing", "border-box");
+	}
+
+	.site-dev{
+		max-width: 90%;
+		max-height: 82px;
+		z-index: 1;		
+	}
+
+	.site-description{
+		max-width: 90%;
+		min-height: 215px;
+		max-height: 215px;
+		z-index:1;
+	}
+}
+
+@media screen and (min-width: 760px){
+	.portfolio-wrap{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.portfolio-site{
+		margin: 20px 15px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	h2{
+		margin-bottom: 175px;
+	}
+}

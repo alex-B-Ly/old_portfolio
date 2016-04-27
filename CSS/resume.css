@@ -1,0 +1,435 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET */
+
+html, body{
+	height:100%;
+	width: 100%;
+}
+
+body{
+	background:url("../images/congruent_outline.png"); /* This pattern is downloaded from www.subtlepatterns.com */
+	color:white;
+}
+
+#wrapper{
+	margin:0 auto;
+	width: 80%;
+}
+
+/* HEADER SECTION
+==================*/
+
+header{
+	margin-top: 50px;
+}
+
+#headshot,
+#CVintro{
+	display: inline-block;
+}
+
+#headshot{
+	height: 15%;
+	width: 15%;
+	min-height:240px;
+	min-width: 240px;
+	border: 4px solid #fff;
+	margin-right: 12%;
+}
+
+#headshot img{
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	max-height:100%;
+}
+
+#CVintro{
+	width: 40%;
+	position: absolute;
+	top:7%;
+	margin-left: 8%;
+}
+
+#CVintro h1{
+	text-align: center;
+	font-size:5.5em;
+	margin: 3% auto;
+}
+
+#CVintro h1 a,
+#CVintro h1 a:link,
+#CVintro h1 a:active,
+#CVintro h1 a:visited{
+	text-decoration: none;
+	color: white;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}	
+
+#CVintro h1 a:hover{
+	color: #e8e8e8;
+	font-size: 1.1em;
+}
+
+#CVintro p{
+	font-size: 1.15em;
+}
+
+.printfriendlytitle{
+	display: none;
+}
+
+.lang_fr{
+	display: none;
+	margin-top:-1em;
+}
+
+/* CONTENT INFO SECTION
+=======================*/
+
+.printfriendlycontact{
+	display: none;
+}
+
+.contact_info{
+	height: 3.5em;
+	background: rgba(20,20,20,0.8);
+}
+
+.contact_info .lang_fr{
+	margin-top: 0px;
+}
+
+.portfolio_info{
+	height: 3.5em;
+	border-top: 2px solid white;
+	background: rgba(25,25,25,0.7);
+	text-align: center;	
+}
+
+.contact_list li,
+.portfolio_sec li{
+	display: inline-block;
+	font-size: 1.5em;
+}
+
+.portfolio_sec li{
+	margin: 1% 9%;
+}
+
+.portfolio_sec li a,
+.portfolio_sec li a:link,
+.portfolio_sec li a:active,
+.portfolio_sec li a:visited{
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid rgba(125,125,125,0.3);
+	padding: 5px 10px;
+	-webkit-transition: all 1.5s;
+	transition: all 1.5s;
+}
+
+.portfolio_sec li a:hover{
+	border: 2px solid white;
+	padding: 7px 50px;
+	margin: 1% -40px;
+	background: #3d3d3d;
+}
+
+.contact_title{
+	font-size: 2em;
+	margin-left: 5%;
+}
+
+.contact_item{
+	margin-left: 12%;
+}
+
+#translate_button{
+	height:2.5em;
+	width: 300px;
+	border-radius: 15px;
+	border: 2px solid rgba(125,125,125,0.5);
+	background: rgba(90,90,90,0.4);
+	color: white;
+	font-weight: bold;
+	-webkit-transition: all 1.2s;
+	transition: all 1.2s;
+	cursor: pointer;
+	outline: none;
+}
+
+#translate_button:hover{
+	border: 2px solid #fff;
+	-ms-box-shadow: inset 0 0 18px #ddd;
+	box-shadow: inset 0 0 18px #ddd;
+}
+
+#translate_button:active{
+	border: 4px solid lightgray;
+}
+
+/* SKILLS SECTION
+=================*/
+#qual_main{
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: rgba(40,40,40,0.6);
+}
+
+.qual_content{
+	border-top: 2px solid white;
+	margin-bottom: 50px;
+}
+
+.qual_title{
+	font-size: 5em;
+	margin: 50px 0 25px 0;
+	font-weight: bolder;
+}
+
+.list_col_1,
+.list_col_2{
+	display: inline-block;
+	list-style-type: square;
+	margin-left: 5%;
+	font-size: 1.75em;
+	text-align: left;
+}
+
+.list_col_1 li{
+	margin-bottom: 7%;
+}
+
+.list_col_2 li{
+	margin-bottom: 3.2%;
+}
+
+
+/* EDUCATION AND EXPERIENCE SECTION
+===================================*/
+.edu,
+.employ_title{
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.edu_degrees,
+.employ_time{
+	font-size: 1.75em;
+	margin: 25px 0 5px 0;
+	font-weight: bold;
+}
+
+.edu_desc,
+.employ_desc{
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0 25px;
+}
+
+.award{
+	font-style: italic;
+}
+
+/*==============
+ MEDIA QUERIES
+================*/
+
+/* TABLETS */
+@media screen and (max-width: 1180px){
+
+header{
+	text-align: center;
+}
+
+#headshot{
+	margin: 0 auto;
+}
+
+#CVintro{
+	position: relative;
+	margin: 10px 0;
+	width: 80%;
+}
+
+#CVintro h1,
+#CVintro p{
+	text-align: center;
+}
+
+.contact_info{
+	height: 125px;
+	text-align: center;
+}
+
+.contact_title{
+	margin: 20px auto;
+}
+
+.contact_item{
+	margin: 8px auto;
+}
+
+.contact_list li{
+	display: block;
+}
+
+}
+
+/* CELL */
+@media screen and (max-width: 640px){
+
+#wrapper{
+	width: 100%;
+}
+
+.list_col_1,
+.list_col_2{
+	display: block;
+	margin: 0 auto;
+}
+
+.list_col_1 li,
+.list_col_2 li{
+	margin: 5px auto;
+	text-align: center;
+	list-style-type: none;
+}
+
+.qual_title{
+	font-size: 4.1em;
+}
+
+}
+
+
+@media screen and (max-width: 360px){
+
+#headshot{
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.contact_info{
+	height: 150px;
+}
+
+.portfolio_info{
+	padding: 30px 0;
+}
+
+.portfolio_sec li{
+	margin: 17px auto;
+}
+
+.portfolio_sec li a,
+.portfolio_sec li a:link,
+.portfolio_sec li a:active,
+.portfolio_sec li a:visited{
+	border: 2px solid #fff;
+	font-size: 1.5em;
+}
+
+#translate_button{
+	width: 290px;
+	height: 40px;
+}
+
+.qual_title{
+	font-size: 3em;
+	text-decoration: underline;
+	font-weight: 400;
+}
+
+}
+
+
+/* BREAK POINTS */
+
+@media screen and (min-width: 1181px) and (max-width: 1600px){
+	.portfolio_sec{
+		padding-left: 22%;
+	}
+}
+
+@media screen and (min-width: 1241px) and (max-width: 1390px){
+	.portfolio_sec li a{
+		margin-right: 10%;
+	}
+
+	#translate_button{
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width: 1180px) and (max-width: 1240px){
+
+.contact_item{
+	margin: 0 50px;
+}
+
+}
+
+
+@media screen and (max-width: 960px){
+
+.portfolio_info{
+	height: 6em;
+}
+
+.portfolio_sec li{
+	margin-top: 10px;
+}
+
+}
